@@ -13,7 +13,9 @@ defmodule StoreManagementSystemWeb.ProductLive.Show do
     {:noreply,
      socket
      |> assign(:page_title, page_title(socket.assigns.live_action))
-     |> assign(:product, StoreManagement.get_product!(id))}
+     |> assign(:product, StoreManagement.get_product!(id))
+     |> assign(:stores, StoreManagement.list_stores())
+    }
   end
 
   defp page_title(:show), do: "Show Product"

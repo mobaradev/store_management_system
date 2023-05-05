@@ -17,6 +17,7 @@
   <:col :let={{_id, product}} label="Wholesale price"><%= product.wholesale_price %></:col>
   <:col :let={{_id, product}} label="Retail price"><%= product.retail_price %></:col>
   <:col :let={{_id, product}} label="Current inventory count"><%= product.current_inventory_count %></:col>
+  <:col :let={{_id, product}} label="Store id"><%= product.store_id %></:col>
   <:action :let={{_id, product}}>
     <div class="sr-only">
       <.link navigate={~p"/product/#{product}"}>Show</.link>

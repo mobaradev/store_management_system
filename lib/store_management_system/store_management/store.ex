@@ -6,7 +6,7 @@ defmodule StoreManagementSystem.StoreManagement.Store do
     field :location, :string
     field :product_information, :string
     field :store_id, :integer
-    has_many :products, Product
+    has_many :products, StoreManagementSystem.StoreManagement.Product
 
     timestamps()
   end

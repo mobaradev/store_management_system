@@ -117,6 +117,11 @@ defmodule StoreManagementSystem.StoreManagement do
     Repo.all(Product)
   end
 
+  def list_products_by_store_id!(store_id) do
+    q = from m in Product, where: m.store_id == ^store_id
+    Repo.all(q)
+  end
+
   @doc """
   Gets a single product.
 

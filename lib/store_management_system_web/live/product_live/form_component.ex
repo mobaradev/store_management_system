@@ -24,6 +24,8 @@ defmodule StoreManagementSystemWeb.ProductLive.FormComponent do
         <.input field={@form[:wholesale_price]} type="number" label="Wholesale price" step="any" />
         <.input field={@form[:retail_price]} type="number" label="Retail price" step="any" />
         <.input field={@form[:current_inventory_count]} type="number" label="Current inventory count" />
+        <%!-- <.input field={@form[:store_id]} type="number" label="Store id" /> --%>
+        <.input field={@form[:store_id]} type="select" options={Enum.map(StoreManagement.list_stores(), &({&1.location, &1.id}))}/>
         <:actions>
           <.button phx-disable-with="Saving...">Save Product</.button>
         </:actions>
