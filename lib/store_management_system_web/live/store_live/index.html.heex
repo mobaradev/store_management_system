@@ -14,7 +14,7 @@
 >
   <:col :let={{_id, store}} label="Location"><%= store.location %></:col>
   <:col :let={{_id, store}} label="Store"><%= store.store_id %></:col>
-  <:col :let={{_id, store}} label="Product information"><%= store.product_information %></:col>
+  <:col :let={{_id, store}} label="Number of products:"><%= length(StoreManagementSystem.StoreManagement.list_products_by_store_id!(store.store_id)) %></:col>
   <:action :let={{_id, store}}>
     <div class="sr-only">
       <.link navigate={~p"/stores/#{store}"}>Show</.link>

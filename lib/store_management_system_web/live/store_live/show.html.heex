@@ -11,7 +11,23 @@
 <.list>
   <:item title="Location"><%= @store.location %></:item>
   <:item title="Store"><%= @store.store_id %></:item>
-  <:item title="Product information"><%= @products.name %></:item>
+  <:item title="Product information">
+    <p class="title">Products:</p>
+    <div class="clearfix"></div>
+    <br />
+    <table class="product-table">
+    <tr>
+      <td>Name</td>
+      <td>Vendor</td>
+    </tr>
+    <%= Enum.map(@products, fn(item) -> %>
+      <tr>
+        <td><%= item.name %></td>
+        <td><%= item.vendor %></td>
+      </tr>
+    <% end) %>
+    </table>
+  </:item>
 </.list>
 
 <.back navigate={~p"/stores"}>Back to stores</.back>

@@ -3,3 +3,67 @@
 @import "tailwindcss/utilities";
 
 /* This file is for your main application CSS */
+.product-table tr {
+    padding: 20px;
+    margin: 20px;
+    border-left: 1px solid red;
+    border-bottom: 2px solid red;
+}
+
+.product-table td {
+    padding: 12px 8px;
+}
+
+@keyframes textClip {
+    to {
+        background-position: 200% center;
+    }
+}
+
+.title {
+    /*font-size: 100px;*/
+    font-weight: bold;
+    text-align: center;
+    transition: opacity 2s, transform 0.5s;
+    cursor: default;
+    background-image: linear-gradient(-225deg, #FD4F00 0%, #4dc4ff 50%, #FD4F00 100%);
+    background-clip: border-box;
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textClip 1.5s linear infinite;
+    float: left;
+    /*padding: 50px 0;*/
+    font-size: 32px;
+}
+
+.clearfix, .clearfix::before, .clearfix::after {
+    display: table;
+    clear: both;
+    content: '';
+}
+
+.thank-you {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 50px;
+    height: 100%;
+    /* background-color: red; */
+    color: greenyellow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: leaves 0.5s ease-in-out infinite alternate;
+}
+
+
+@keyframes leaves {
+    0% {
+        transform: scale(1.0);
+    }
+    100% {
+        transform: scale(1.25);
+        color: pink;
+    }
+}

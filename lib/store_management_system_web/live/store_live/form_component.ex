@@ -21,7 +21,7 @@ defmodule StoreManagementSystemWeb.StoreLive.FormComponent do
       >
         <.input field={@form[:location]} type="text" label="Location" />
         <.input field={@form[:store_id]} type="number" label="Store" />
-        <.input field={@form[:product_information]} type="text" label="Product information" />
+        <.input field={@form[:product_information]} type="text" value=".sdfsd" style="display: none;" label="" />
         <:actions>
           <.button phx-disable-with="Saving...">Save Store</.button>
         </:actions>
